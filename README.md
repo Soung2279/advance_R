@@ -25,6 +25,11 @@ async def xxx(bot, ev):
 ```
 
 **调用语音**
+
+将语音文件放在 ``资源库/record/`` 中
+> 资源库就是你在_bot_.py里面填写的RES_DIR
+> 例如"C://Resources/record/"
+例如
 ```python
 xxx = R.rec(xxx/xxx.mp3).cqcode
 
