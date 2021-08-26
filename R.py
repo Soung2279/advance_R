@@ -60,12 +60,6 @@ class ResRec(ResObj):
             return MessageSegment.record(self.url)
         elif hoshino.config.RES_PROTOCOL == 'file':
             return MessageSegment.record(f'file:///{os.path.abspath(self.path)}')
-        else:
-            try:
-                return MessageSegment.record(util.pic2b64(self.open()))
-            except Exception as e:
-                hoshino.logger.exception(e)
-                return MessageSegment.text('[语音出错]')
 
 
 def get(path, *paths):
